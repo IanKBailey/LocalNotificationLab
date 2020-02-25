@@ -39,7 +39,7 @@ class NotificationViewController: UIViewController {
     private func checkForNotificationAuthorization() {
         center.getNotificationSettings { (settings) in
             if settings.authorizationStatus == .authorized {
-                print("app is authorized for notification")
+                print("authorized")
             } else {
                 self.requestNotificationPermissions()
             }
@@ -52,9 +52,9 @@ class NotificationViewController: UIViewController {
                 return
             }
             if granted {
-                print("access was granted")
+                print("Granted")
             } else {
-                print("access Denied")
+                print("Denied")
             }
         }
     }

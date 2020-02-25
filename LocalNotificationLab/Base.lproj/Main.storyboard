@@ -70,6 +70,9 @@
                                 <date key="maximumDate" timeIntervalSinceReferenceDate="631105200">
                                     <!--2020-12-31 11:00:00 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="LpB-Ln-foa" eventType="valueChanged" id="nDY-Bo-4Ct"/>
+                                </connections>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r0f-72-zyC">
                                 <rect key="frame" x="20" y="76" width="374" height="34"/>

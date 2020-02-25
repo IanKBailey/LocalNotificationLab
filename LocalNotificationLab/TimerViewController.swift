@@ -20,7 +20,7 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     weak var delegate: CreateNotificationDelegate?
     
-    private var timeInt: TimeInterval = Date().timeIntervalSinceNow + 5
+    private var timeInt: TimeInterval = Date().timeIntervalSinceNow + 5 //testing
     
     
     
@@ -69,5 +69,8 @@ class TimerViewController: UIViewController {
         dismiss(animated: true)
     }
 
-
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        timeInt = sender.countDownDuration
+    }
+    
 }

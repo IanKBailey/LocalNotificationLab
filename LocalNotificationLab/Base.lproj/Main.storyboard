@@ -18,6 +18,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="smD-wk-Nlz">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notificationCell" id="alo-4A-y4f">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alo-4A-y4f" id="wAX-WS-3kC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -30,28 +40,30 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ui2-31-TtM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="hDB-zc-efJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="hDB-zc-efJ">
                             <connections>
                                 <segue destination="LgH-26-RIm" kind="presentation" id="i9m-ef-oWn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="smD-wk-Nlz" id="3rf-gN-PV7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="891" y="130"/>
         </scene>
-        <!--View Controller-->
+        <!--Timer View Controller-->
         <scene sceneID="C9g-en-ric">
             <objects>
-                <viewController id="LpB-Ln-foa" sceneMemberID="viewController">
+                <viewController id="LpB-Ln-foa" customClass="TimerViewController" customModule="LocalNotificationLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZTs-l7-xvS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HrU-If-jz7">
-                                <rect key="frame" x="0.0" y="367" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HrU-If-jz7">
+                                <rect key="frame" x="0.0" y="118" width="414" height="216"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="473338800">
                                     <!--2016-01-01 11:00:00 +0000-->
                                 </date>
@@ -59,17 +71,38 @@
                                     <!--2020-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r0f-72-zyC">
+                                <rect key="frame" x="20" y="76" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HrU-If-jz7" firstAttribute="trailing" secondItem="zez-ee-iP7" secondAttribute="trailing" id="DHI-c5-7Dt"/>
+                            <constraint firstItem="r0f-72-zyC" firstAttribute="top" secondItem="zez-ee-iP7" secondAttribute="top" constant="20" id="T9A-TP-fuU"/>
+                            <constraint firstItem="HrU-If-jz7" firstAttribute="leading" secondItem="zez-ee-iP7" secondAttribute="leading" id="cum-FK-elH"/>
+                            <constraint firstItem="zez-ee-iP7" firstAttribute="trailing" secondItem="r0f-72-zyC" secondAttribute="trailing" constant="20" id="e2h-6c-g2w"/>
+                            <constraint firstItem="r0f-72-zyC" firstAttribute="leading" secondItem="zez-ee-iP7" secondAttribute="leading" constant="20" id="hdl-dM-MKl"/>
+                            <constraint firstItem="HrU-If-jz7" firstAttribute="top" secondItem="r0f-72-zyC" secondAttribute="bottom" constant="8" id="lfz-u5-Zmb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zez-ee-iP7"/>
                     </view>
                     <navigationItem key="navigationItem" id="ozr-Jp-XAf">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="dLj-9m-nml"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="dLj-9m-nml">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="LpB-Ln-foa" id="ubh-Dv-5J2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="HrU-If-jz7" id="Vp0-Er-dZ2"/>
+                        <outlet property="textField" destination="r0f-72-zyC" id="ibJ-T7-s13"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHA-jc-OE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="130"/>
+            <point key="canvasLocation" x="2357" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ir-Q8-W7N">
@@ -105,7 +138,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fej-7j-MwW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="130"/>
+            <point key="canvasLocation" x="1623" y="130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

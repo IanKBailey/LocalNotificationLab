@@ -15,6 +15,8 @@
 		56ED1D1423FF1E70008A46AF /* LocalNotificationLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED1D1323FF1E70008A46AF /* LocalNotificationLabTests.swift */; };
 		56ED1D1F23FF2027008A46AF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED1D1E23FF2027008A46AF /* NotificationViewController.swift */; };
 		56ED1D2123FF25D8008A46AF /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED1D2023FF25D8008A46AF /* TimerViewController.swift */; };
+		56ED1D2524058BF0008A46AF /* Pending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED1D2424058BF0008A46AF /* Pending.swift */; };
+		56ED1D272405D22A008A46AF /* duck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56ED1D262405D22A008A46AF /* duck.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		56ED1D1523FF1E70008A46AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ED1D1E23FF2027008A46AF /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		56ED1D2023FF25D8008A46AF /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		56ED1D2424058BF0008A46AF /* Pending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pending.swift; sourceTree = "<group>"; };
+		56ED1D262405D22A008A46AF /* duck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = duck.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +87,11 @@
 			children = (
 				56ED1CFC23FF1E6E008A46AF /* AppDelegate.swift */,
 				56ED1CFE23FF1E6E008A46AF /* SceneDelegate.swift */,
+				56ED1D2424058BF0008A46AF /* Pending.swift */,
 				56ED1D1E23FF2027008A46AF /* NotificationViewController.swift */,
 				56ED1D2023FF25D8008A46AF /* TimerViewController.swift */,
 				56ED1D0223FF1E6E008A46AF /* Main.storyboard */,
+				56ED1D262405D22A008A46AF /* duck.jpg */,
 				56ED1D0523FF1E70008A46AF /* Assets.xcassets */,
 				56ED1D0723FF1E70008A46AF /* LaunchScreen.storyboard */,
 				56ED1D0A23FF1E70008A46AF /* Info.plist */,
@@ -185,6 +191,7 @@
 			files = (
 				56ED1D0923FF1E70008A46AF /* LaunchScreen.storyboard in Resources */,
 				56ED1D0623FF1E70008A46AF /* Assets.xcassets in Resources */,
+				56ED1D272405D22A008A46AF /* duck.jpg in Resources */,
 				56ED1D0423FF1E6E008A46AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +213,7 @@
 				56ED1D2123FF25D8008A46AF /* TimerViewController.swift in Sources */,
 				56ED1CFD23FF1E6E008A46AF /* AppDelegate.swift in Sources */,
 				56ED1CFF23FF1E6E008A46AF /* SceneDelegate.swift in Sources */,
+				56ED1D2524058BF0008A46AF /* Pending.swift in Sources */,
 				56ED1D1F23FF2027008A46AF /* NotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
